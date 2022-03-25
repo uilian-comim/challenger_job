@@ -1,0 +1,50 @@
+.Home__container {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   background-image: url("../../../public/Welcome_Background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5rem;
+   padding-top: 3.5rem;
+
+   .Home__container__screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border-radius: 0.8rem;
+      padding: 4rem;
+
+      h2 {
+         font-size: 24px;
+         font-weight: 600;
+         color: #197ACF;
+      }
+
+      p {
+         text-align: center;
+         font-weight: 400;
+         color: #767676;
+      }
+
+      button {
+         width: 100%;
+         height: 3.5rem;
+         border-radius: 0.5rem;
+         color: #197ACF;
+         background-color: transparent;
+         border: 2px solid;
+         font-weight: 600;
+         font-size: 16px;
+      }
+   }
+}
