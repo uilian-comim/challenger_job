@@ -12,7 +12,12 @@
    padding: 1.5rem;
    padding-top: 3.5rem;
 
-   .Home__container__screen {
+   div:first-child {
+      visibility: hidden;
+      display: none;
+   }
+
+   &__screen {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,7 +32,7 @@
       h2 {
          font-size: 24px;
          font-weight: 600;
-         color: #197ACF;
+         color: #197acf;
       }
 
       p {
@@ -40,11 +45,61 @@
          width: 100%;
          height: 3.5rem;
          border-radius: 0.5rem;
-         color: #197ACF;
+         color: #197acf;
          background-color: transparent;
          border: 2px solid;
          font-weight: 600;
-         font-size: 16px;
+         font-size: 14px;
+         text-transform: uppercase;
+         transition: all 0.3s ease-in-out;
+
+         &:active {
+            color: white;
+            background: linear-gradient(274.13deg, #197acf 0.89%, #1a8de9 98.03%);
+            transition: all 0.3s ease-in-out;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .Home__container {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+      padding-right: 3rem;
+      padding-left: 0;
+
+      div:first-child {
+         display: block;
+      }
+
+      &__screen {
+         width: max-content;
+         height: max-content;
+         padding: 6rem;
+         padding-left: 10rem;
+         padding-right: 10rem;
+
+         p {
+            span {
+               display: block;
+            }
+         }
+         button {
+            height: auto;
+            width: auto;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            &:hover {
+               color: white;
+               background: linear-gradient(274.13deg, #197acf 0.89%, #1a8de9 98.03%);
+               transition: all 0.3s ease-in-out;
+            }
+         }
       }
    }
 }
