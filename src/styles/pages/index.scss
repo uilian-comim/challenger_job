@@ -1,4 +1,4 @@
-.Home__container {
+.Welcome__container {
    position: relative;
    width: 100vw;
    height: 100vh;
@@ -63,7 +63,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-   .Home__container {
+   .Welcome__container {
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
       padding: 0;
