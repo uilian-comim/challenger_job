@@ -1,7 +1,7 @@
 .Login__container {
    @extend .Welcome__container;
    padding-top: 4rem;
-   background-image: url("../../../public/Login_Background.jpg");
+   background-image: url("../../../public/Images/Login_Background.jpg");
 
    div:first-child {
       visibility: hidden;
