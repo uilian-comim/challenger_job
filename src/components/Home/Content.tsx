@@ -1,6 +1,5 @@
 import { DataArrayProps } from "interfaces";
 import Image from "next/image"
-import { text } from "node:stream/consumers";
 import { BsClockHistory, BsFiles } from "react-icons/bs";
 import { CgCamera } from "react-icons/cg";
 
@@ -8,7 +7,7 @@ export const Content = function ({ values }: DataArrayProps) {
    return (
       <div className="content">
          {
-            values.map((value, index) => {
+            values.map((value) => {
                return (
                   <>
                      { value.title && <p>{value.title}</p> }
