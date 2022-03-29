@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import fourthImage from "../../../public/Images/Fourth_Image.jpg";
-import fifthImage from "../../../public/Images/Fifth_Image.jpg";
+import fourthImage from "assets/Images/Fourth_Image.jpg";
+import fifthImage from "assets/Images/Fifth_Image.jpg";
 
 export function Carousel() {
    return (

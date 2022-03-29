@@ -12,17 +12,21 @@ export function Menu() {
             <p>Em alta:</p>
          </div>
          <div className="Menu__Container__Items">
-            <div>
+            <div className="content">
                <CgCamera />
+               <p>Vídeos</p>
             </div>
-            <div>
+            <div className="content">
                <BsHeadset />
+               <p>Podcasts</p>
             </div>
-            <div>
+            <div className="content">
                <FiBookOpen />
+               <p>Artigos</p>
             </div>
-            <div>
+            <div className="content">
                <IoRocketOutline />
+               <p>Apresentações</p>
             </div>
          </div>
       </div>
