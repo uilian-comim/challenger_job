@@ -1,5 +1,10 @@
 export function Aside() {
    return (
-      <aside>Teste</aside>
+      <aside className="aside">
+         <div className="aside__container">
+            <p>Recomendados</p>
+            <p>Trilhas</p>
+         </div>
+      </aside>
    )
 }

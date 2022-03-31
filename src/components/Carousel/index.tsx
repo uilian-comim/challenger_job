@@ -1,25 +1,39 @@
+import { SlidesProps } from "interfaces";
 import Image from "next/image";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
-import fourthImage from "assets/Images/Fourth_Image.jpg";
-import fifthImage from "assets/Images/Fifth_Image.jpg";
 
-export function Carousel() {
+export function Carousel({ slides }: SlidesProps) {
    return (
-      <div className="Carousel">
-         <p>Conteúdos especiais</p>
-         <div className="Carousel__Container">
-            <div className="Image__Container">
-               <Image src={fourthImage} alt="fourthImage" width={244} height={267} layout="fixed" />
-               <p>Dicas de <span>carreira</span></p>
-               <span>Nome Sobrenome</span>
-               <button>Saiba mais</button>
-            </div>
-            <div className="Image__Container">
-               <Image src={fifthImage} alt="fifthImage" width={244} height={267} layout="fixed" />
-               <p>Do mil ao<span>milhão</span></p>
-               <span>Nome Sobrenome</span>
-               <button>Saiba mais</button>
-            </div>
+      <div className="carousel">
+         <p className="carousel__title">Conteúdos especiais</p>
+         <div className="carousel__container">
+            {
+               slides.map((slide, index) => {
+                  if (index + 1 < slides.length) {
+                     return (
+                        <div className="Image__Container" key={index}>
+                           <img src={slide.path} alt={slide.alt} />
+                           <p className="firstText">Dicas de <span>carreira</span></p>
+                           <span className="secondText">Nome Sobrenome</span>
+                           <button className="button">Saiba mais</button>
+                        </div>
+                     )
+                  } else {
+                     return (
+                        <div className="nextBackground">
+                           <MdOutlineArrowForwardIos />
+                           <div className="Image__Container" key={index}>
+                              <img src={slide.path} alt={slide.alt} />
+                              <p className="firstText">Dicas de <span>carreira</span></p>
+                              <span className="secondText">Nome Sobrenome</span>
+                              <button className="button">Saiba mais</button>
+                           </div>
+                        </div>
+                     )
+                  }
+               })
+            }
          </div>
       </div>
    )

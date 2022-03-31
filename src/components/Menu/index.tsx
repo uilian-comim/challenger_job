@@ -12,19 +12,19 @@ export function Menu() {
             <p>Em alta:</p>
          </div>
          <div className="Menu__Container__Items">
-            <div className="content">
+            <div className="menu__items">
                <CgCamera />
                <p>Vídeos</p>
             </div>
-            <div className="content">
+            <div className="menu__items">
                <BsHeadset />
                <p>Podcasts</p>
             </div>
-            <div className="content">
+            <div className="menu__items">
                <FiBookOpen />
                <p>Artigos</p>
             </div>
-            <div className="content">
+            <div className="menu__items">
                <IoRocketOutline />
                <p>Apresentações</p>
             </div>

@@ -1,75 +1,135 @@
-.Carousel {
-   position: relative;
-   width: 100vw;
-   height: 100%;
+.carousel {
+   width: 100%;
    background: linear-gradient(130.05deg, #fafeff -0.02%, #effcff 99.98%);
-   padding-top: 3rem;
-   padding-bottom: 4rem;
    padding-left: 1rem;
-   display: flex;
-   flex-direction: column;
-   gap: 3rem;
+   padding-top: 2.5rem;
+   padding-bottom: 2.5rem;
+   overflow: hidden;
 
-   p {
-      font-weight: 300;
+   &__title {
+      margin-bottom: 2rem;
       font-size: 18px;
+      line-height: 26px;
+      font-weight: 300;
       color: #414141;
    }
 
-   &__Container {
-      position: relative;
-      overflow: hidden;
+   &__container {
       display: flex;
-      align-items: center;
-      align-items: center;
       gap: 2rem;
-
       .Image__Container {
+         position: relative;
          width: 100%;
          height: 100%;
-         position: relative;
-         p {
+
+         img {
+            object-fit: cover;
+            background: linear-gradient(248.59deg, rgba(0, 26, 39, 0.13) 38.5%, rgba(0, 26, 39, 0.72) 98.44%);
+            border-radius: 0.5rem;
+            opacity: 0.9;
+            width: 250px;
+            height: 300px;
+         }
+
+         .firstText {
             position: absolute;
-            top: 3rem;
-            left: 1.5rem;
-            font-weight: 200;
-            font-size: 3rem;
+            top: 2rem;
+            left: 1rem;
             color: white;
+            font-size: 24px;
+            font-weight: 100;
+            line-height: 32px;
 
             span {
-               font-weight: 700;
-               color: #f5e28f;
                display: block;
+               font-weight: 600;
+               color: #ffe388;
             }
          }
 
-         span:nth-child(3) {
+         .secondText {
             position: absolute;
             bottom: 10rem;
-            left: 1.5rem;
-            color: white;
+            left: 2rem;
             font-weight: 600;
+            color: white;
+            letter-spacing: 0.05rem;
+            font-size: 14px;
+            line-height: 22px;
          }
 
-         button {
+         .button {
             position: absolute;
+            bottom: 3rem;
             right: 2rem;
-            bottom: 2.5rem;
-            background: linear-gradient(274.13deg, #197acf 0.89%, #1a8de9 98.03%);
-            border: none;
-            padding: 1.5rem;
-            padding-right: 3rem;
-            padding-left: 3rem;
             text-transform: uppercase;
-            font-size: 1.6rem;
-            color: white;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0.007rem;
             font-weight: 600;
-            letter-spacing: 0.07rem;
+            color: white;
+            line-height: 22px;
+            background: linear-gradient(274.13deg, #197acf 0.89%, #1a8de9 98.03%);
             border-radius: 0.4rem;
+            border: none;
+            padding: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+         }
+      }
+
+      .nextBackground {
+         background: transparent;
+         width: 100%;
+         height: 100%;
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .carousel {
+      width: 100vw;
+      position: relative;
+      left: -5rem;
+      padding-left: 10rem;
+      padding-right: 30rem;
+
+      &__title {
+         position: relative;
+         left: -3rem;
+      }
+
+      &__container {
+         .Image__Container {
+            img {
+               width: 100%;
+               height: 225px;
+            }
+
+            .secondText {
+               bottom: 3.5rem;
+            }
          }
 
-         img {
+         .nextBackground {
+            position: relative;
+            width: 40%;
+            background: linear-gradient(178.65deg, #032a5e 0%, #003781 100%);
             border-radius: 0.5rem;
+            overflow: hidden;
+
+            svg {
+               position: absolute;
+               bottom: 50%;
+               left: 50%;
+               font-size: 32px;
+               color: white;
+            }
+
+            .Image__Container {
+               width: 100vw;
+               opacity: 0.4;
+            }
          }
       }
    }

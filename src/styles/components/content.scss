@@ -1,0 +1,133 @@
+.Content__container {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   .Content__item {
+      &__image {
+         position: relative;
+         img {
+            border-radius: 0.5rem;
+            object-fit: cover;
+         }
+
+         .onhigh {
+            display: none;
+         }
+
+         .Confidential {
+            position: absolute;
+            top: 0;
+            background: #ffffff;
+            color: #f86200;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.08rem;
+            font-weight: 600;
+            padding: 0.5rem;
+            border-radius: 4px 0px;
+            opacity: 0.8;
+         }
+
+         .Internal {
+            @extend .Confidential;
+            color: #3da556;
+         }
+
+         .type {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 0.5rem;
+            background-color: #ffffff;
+            opacity: 0.8;
+            padding: 0.4rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            border-radius: 3rem;
+            color: #197acf;
+
+            p {
+               padding-left: 0.4rem;
+               border-left: 1px solid;
+               font-size: 10px;
+            }
+         }
+      }
+
+      .text-content {
+         font-size: 14px;
+         line-height: 22px;
+         letter-spacing: 0.005rem;
+         font-weight: 400;
+         color: #414141;
+      }
+
+      .about {
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         padding: 1rem;
+         padding-left: 0;
+         color: #999999;
+
+         div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 0.5rem;
+            border-left: 1px solid;
+            padding-left: 0.5rem;
+         }
+      }
+   }
+
+   .Content__item__additional {
+      @extend .Content__item;
+
+      display: none;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .Content__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 1.5rem;
+      padding: 0;
+
+      .Content__item {
+         &__image {
+            .onhigh {
+               position: absolute;
+               top: 1.5rem;
+               right: 1.5rem;
+               display: flex;
+               background-color: white;
+               opacity: 0.8;
+               border-radius: 50%;
+               padding: 0.3rem;
+               color: #197ACF;
+            }
+
+            .Confidential {
+               display: none;
+            }
+
+            .Internal {
+               display: none;
+            }
+         }
+      }
+
+      .Content__item__additional {
+         display: block;
+      }
+   }
+}

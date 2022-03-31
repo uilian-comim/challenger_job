@@ -6,8 +6,9 @@
    gap: 1rem;
    padding-top: 1.5rem;
    padding-bottom: 1.5rem;
-   padding-left: 1rem;
+   padding-left: 2rem;
    border-bottom: 1px solid #d9d9d9;
+   margin-bottom: 1rem;
 
    &__OnHigh {
       display: flex;
@@ -33,7 +34,7 @@
       gap: 1rem;
       width: auto;
 
-      .content {
+      .menu__items {
          padding: 0;
 
          svg {
@@ -57,28 +58,21 @@
 
 @media only screen and (min-width: 768px) {
    .Menu__Container {
-      border: none;
-      gap: 2rem;
       justify-content: flex-end;
-      &__OnHigh {
-         justify-content: center;
-         max-width: 8rem;
-      }
+      padding-right: 0;
+      border: none;
 
       &__Items {
-         justify-content: flex-end;
-         gap: 2rem;
-         width: auto;
-
-         .content {
+         .menu__items {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.8rem;
+            gap: 1rem;
+
             p {
-               display: block;
+               display: flex;
                visibility: visible;
-               color: #197acf;
+               color: #197ACF;
             }
          }
       }
